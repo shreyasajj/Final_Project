@@ -6,5 +6,19 @@ Webcam.attach( '#camContainer' );
     function take_snapshot() {
       Webcam.snap( function(img_data_url) {
         document.getElementById('picture_from_cam').innerHTML = '<img src="'+img_data_url+'"/>';
+            var form = new FormData();
+            var settings = {
+            "url": "/image",
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+            "URL": img_data_url
+            },
+
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
       } );
     }

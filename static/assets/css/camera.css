@@ -1,0 +1,13 @@
+
+#camContainer {
+  width: 600px;
+  height: 450px;
+}
+#picture_from_cam {
+  position: fixed;top: 0;right: 0;
+}
+#picture_from_cam img {
+  border: solid 1px #000;
+  width: 300px;
+  height: auto;
+}
